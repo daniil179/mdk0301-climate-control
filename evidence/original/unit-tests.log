@@ -1,0 +1,61 @@
+PASS Climate.UnitTests.OperationsTests.O03_ValidSignedPackageActivates
+PASS Climate.UnitTests.OperationsTests.O14_Rbac(role: Engineer, operation: EnrollDevice, expected: False)
+PASS Climate.UnitTests.OperationsTests.O14_Rbac(role: Administrator, operation: EnrollDevice, expected: True)
+PASS Climate.UnitTests.OperationsTests.O14_Rbac(role: Operator, operation: ReadTelemetry, expected: True)
+PASS Climate.UnitTests.OperationsTests.O14_Rbac(role: Engineer, operation: ChangeConfiguration, expected: True)
+PASS Climate.UnitTests.OperationsTests.O14_Rbac(role: Operator, operation: ChangeConfiguration, expected: False)
+PASS Climate.UnitTests.OperationsTests.O07_QueueSurvivesContextRestart
+PASS Climate.UnitTests.OperationsTests.O15_TrustedCertificateIsAcceptedOffline
+PASS Climate.UnitTests.OperationsTests.O18_ReliabilityUsesUptimeNotObservationPeriod
+PASS Climate.UnitTests.OperationsTests.O05_WrongPublisherIsRejected
+PASS Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: "1.0.0-alpha", b: "1.0.0-alpha.1", expected: -1)
+PASS Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: "1.0.0+build.1", b: "1.0.0+build.2", expected: 0)
+PASS Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: "1.0.0-rc.1", b: "1.0.0", expected: -1)
+PASS Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: "1.10.0", b: "1.2.0", expected: 1)
+PASS Climate.UnitTests.OperationsTests.O17_ExpiredCertificateIsRejected
+PASS Climate.UnitTests.OperationsTests.O11_MigrationPreservesOldRowAndOldWriter
+PASS Climate.UnitTests.OperationsTests.O10_ConflictIsNotSilentlyAcknowledged
+PASS Climate.UnitTests.OperationsTests.O09_ExhaustedRetriesKeepPendingMessage
+PASS Climate.UnitTests.OperationsTests.O08_TransientOutageRetriesTwiceThenDelivers
+PASS Climate.UnitTests.OperationsTests.O13_BcryptChecksCorrectAndWrongPassword
+PASS Climate.UnitTests.OperationsTests.O02_InvalidSemverIsRejected(value: "1.2")
+PASS Climate.UnitTests.OperationsTests.O02_InvalidSemverIsRejected(value: "1.2.3-01")
+PASS Climate.UnitTests.OperationsTests.O02_InvalidSemverIsRejected(value: "01.2.3")
+PASS Climate.UnitTests.OperationsTests.O16_WrongRootAndNameAreRejected
+PASS Climate.UnitTests.OperationsTests.O06_DowngradeAndPrereleaseAreRejected(version: "1.0.0")
+PASS Climate.UnitTests.OperationsTests.O06_DowngradeAndPrereleaseAreRejected(version: "1.1.0-rc.1")
+PASS Climate.UnitTests.OperationsTests.O06_DowngradeAndPrereleaseAreRejected(version: "0.9.0")
+PASS Climate.UnitTests.OperationsTests.O20_SatPreservesDeferredStatus
+PASS Climate.UnitTests.OperationsTests.O19_NoFailuresHasNoMeasuredMtbf
+PASS Climate.UnitTests.OperationsTests.O04_CorruptedPackageDoesNotChangeActivePointer
+PASS Climate.UnitTests.OperationsTests.O12_BackupRestoresCommittedData
+PASS Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: 85, h: 100, accepted: True)
+PASS Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: 23.5, h: 250, accepted: False)
+PASS Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: -40, h: 0, accepted: True)
+PASS Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: 100, h: 45, accepted: False)
+PASS Climate.UnitTests.ValidationTests.U05_InvalidSensor(id: "")
+PASS Climate.UnitTests.ValidationTests.U05_InvalidSensor(id: "sensor-1")
+PASS Climate.UnitTests.ValidationTests.U05_InvalidSensor(id: "DVC-001\n")
+PASS Climate.UnitTests.ValidationTests.U09_MalformedHexRejected
+PASS Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: 121, expected: False)
+PASS Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: -121, expected: False)
+PASS Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: -120, expected: True)
+PASS Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: 120, expected: True)
+PASS Climate.UnitTests.ValidationTests.U04_InvalidSequence(n: 1000000001)
+PASS Climate.UnitTests.ValidationTests.U04_InvalidSequence(n: 0)
+PASS Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: "2026-11-04T08:49:59Z", expected: False)
+PASS Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: "2026-11-04T09:00:31Z", expected: False)
+PASS Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: "2026-11-04T09:00:00", expected: False)
+PASS Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: "2026-11-04T09:00:30Z", expected: True)
+PASS Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: "2026-11-04T08:50:00Z", expected: True)
+PASS Climate.UnitTests.ValidationTests.B01_ReproducesLegacyRangeDefect(t: -100)
+PASS Climate.UnitTests.ValidationTests.B01_ReproducesLegacyRangeDefect(t: 100)
+PASS Climate.UnitTests.ValidationTests.U03_InvalidHumidity(h: 100.01000000000001)
+PASS Climate.UnitTests.ValidationTests.U03_InvalidHumidity(h: -0.01)
+PASS Climate.UnitTests.ValidationTests.U01_ValidRanges(t: -40, h: 0)
+PASS Climate.UnitTests.ValidationTests.U01_ValidRanges(t: 23.5, h: 45)
+PASS Climate.UnitTests.ValidationTests.U01_ValidRanges(t: 85, h: 100)
+PASS Climate.UnitTests.ValidationTests.U07_BodyTamperingChangesHmac
+PASS Climate.UnitTests.ValidationTests.U02_InvalidTemperature(t: -40.009999999999998)
+PASS Climate.UnitTests.ValidationTests.U02_InvalidTemperature(t: 85.010000000000005)
+TOTAL 60; FAILED 0; SKIPPED 0

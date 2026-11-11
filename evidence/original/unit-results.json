@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Climate.UnitTests.ValidationTests.U02_InvalidTemperature(t: 85.010000000000005)",
+    "outcome": "Passed",
+    "seconds": 0.000222
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U02_InvalidTemperature(t: -40.009999999999998)",
+    "outcome": "Passed",
+    "seconds": 0.0002485
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U07_BodyTamperingChangesHmac",
+    "outcome": "Passed",
+    "seconds": 0.0015368
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U01_ValidRanges(t: 85, h: 100)",
+    "outcome": "Passed",
+    "seconds": 0.0000778
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U01_ValidRanges(t: 23.5, h: 45)",
+    "outcome": "Passed",
+    "seconds": 0.0002629
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U01_ValidRanges(t: -40, h: 0)",
+    "outcome": "Passed",
+    "seconds": 0.0003215
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U03_InvalidHumidity(h: -0.01)",
+    "outcome": "Passed",
+    "seconds": 0.0002672
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U03_InvalidHumidity(h: 100.01000000000001)",
+    "outcome": "Passed",
+    "seconds": 0.0010793
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.B01_ReproducesLegacyRangeDefect(t: 100)",
+    "outcome": "Passed",
+    "seconds": 0.0003076
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.B01_ReproducesLegacyRangeDefect(t: -100)",
+    "outcome": "Passed",
+    "seconds": 0.0020506
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: \u00222026-11-04T08:50:00Z\u0022, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.0000668
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: \u00222026-11-04T09:00:30Z\u0022, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.0000612
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: \u00222026-11-04T09:00:00\u0022, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.0000851
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: \u00222026-11-04T09:00:31Z\u0022, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.0002376
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U06_TimeBoundaries(at: \u00222026-11-04T08:49:59Z\u0022, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.000256
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U04_InvalidSequence(n: 0)",
+    "outcome": "Passed",
+    "seconds": 0.0002428
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U04_InvalidSequence(n: 1000000001)",
+    "outcome": "Passed",
+    "seconds": 0.0007948
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: 120, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.000056
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: -120, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.0000701
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: -121, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.0002843
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U08_EnvelopeWindow(delta: 121, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.0003143
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U09_MalformedHexRejected",
+    "outcome": "Passed",
+    "seconds": 0.0008948
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U05_InvalidSensor(id: \u0022DVC-001\\n\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.0001227
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U05_InvalidSensor(id: \u0022sensor-1\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.0006166
+  },
+  {
+    "name": "Climate.UnitTests.ValidationTests.U05_InvalidSensor(id: \u0022\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.0266967
+  },
+  {
+    "name": "Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: 100, h: 45, accepted: False)",
+    "outcome": "Passed",
+    "seconds": 0.0000148
+  },
+  {
+    "name": "Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: -40, h: 0, accepted: True)",
+    "outcome": "Passed",
+    "seconds": 0.0000107
+  },
+  {
+    "name": "Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: 23.5, h: 250, accepted: False)",
+    "outcome": "Passed",
+    "seconds": 0.0003469
+  },
+  {
+    "name": "Climate.UnitTests.RefactoringTests.R01_RefactoredControllerEnforcesRange(t: 85, h: 100, accepted: True)",
+    "outcome": "Passed",
+    "seconds": 0.0015365
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O12_BackupRestoresCommittedData",
+    "outcome": "Passed",
+    "seconds": 0.0240993
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O04_CorruptedPackageDoesNotChangeActivePointer",
+    "outcome": "Passed",
+    "seconds": 0.1859076
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O19_NoFailuresHasNoMeasuredMtbf",
+    "outcome": "Passed",
+    "seconds": 0.0006874
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O20_SatPreservesDeferredStatus",
+    "outcome": "Passed",
+    "seconds": 0.0015041
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O06_DowngradeAndPrereleaseAreRejected(version: \u00220.9.0\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.293213
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O06_DowngradeAndPrereleaseAreRejected(version: \u00221.1.0-rc.1\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.1522943
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O06_DowngradeAndPrereleaseAreRejected(version: \u00221.0.0\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.1207106
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O16_WrongRootAndNameAreRejected",
+    "outcome": "Passed",
+    "seconds": 0.7476662
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O02_InvalidSemverIsRejected(value: \u002201.2.3\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.0002468
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O02_InvalidSemverIsRejected(value: \u00221.2.3-01\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.0004258
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O02_InvalidSemverIsRejected(value: \u00221.2\u0022)",
+    "outcome": "Passed",
+    "seconds": 0.0015225
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O13_BcryptChecksCorrectAndWrongPassword",
+    "outcome": "Passed",
+    "seconds": 0.8754812
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O08_TransientOutageRetriesTwiceThenDelivers",
+    "outcome": "Passed",
+    "seconds": 0.0162639
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O09_ExhaustedRetriesKeepPendingMessage",
+    "outcome": "Passed",
+    "seconds": 0.0196397
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O10_ConflictIsNotSilentlyAcknowledged",
+    "outcome": "Passed",
+    "seconds": 0.0471336
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O11_MigrationPreservesOldRowAndOldWriter",
+    "outcome": "Passed",
+    "seconds": 0.0882681
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O17_ExpiredCertificateIsRejected",
+    "outcome": "Passed",
+    "seconds": 0.5378509
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: \u00221.10.0\u0022, b: \u00221.2.0\u0022, expected: 1)",
+    "outcome": "Passed",
+    "seconds": 0.0000197
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: \u00221.0.0-rc.1\u0022, b: \u00221.0.0\u0022, expected: -1)",
+    "outcome": "Passed",
+    "seconds": 0.0000183
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: \u00221.0.0\u002Bbuild.1\u0022, b: \u00221.0.0\u002Bbuild.2\u0022, expected: 0)",
+    "outcome": "Passed",
+    "seconds": 0.0008673
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O01_SemverPrecedence(a: \u00221.0.0-alpha\u0022, b: \u00221.0.0-alpha.1\u0022, expected: -1)",
+    "outcome": "Passed",
+    "seconds": 0.0019934
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O05_WrongPublisherIsRejected",
+    "outcome": "Passed",
+    "seconds": 0.5173197
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O18_ReliabilityUsesUptimeNotObservationPeriod",
+    "outcome": "Passed",
+    "seconds": 0.0065681
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O15_TrustedCertificateIsAcceptedOffline",
+    "outcome": "Passed",
+    "seconds": 0.712023
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O07_QueueSurvivesContextRestart",
+    "outcome": "Passed",
+    "seconds": 0.9039563
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O14_Rbac(role: Operator, operation: ChangeConfiguration, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.0000016
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O14_Rbac(role: Engineer, operation: ChangeConfiguration, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.0000026
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O14_Rbac(role: Operator, operation: ReadTelemetry, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.000006
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O14_Rbac(role: Administrator, operation: EnrollDevice, expected: True)",
+    "outcome": "Passed",
+    "seconds": 0.0004599
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O14_Rbac(role: Engineer, operation: EnrollDevice, expected: False)",
+    "outcome": "Passed",
+    "seconds": 0.0010298
+  },
+  {
+    "name": "Climate.UnitTests.OperationsTests.O03_ValidSignedPackageActivates",
+    "outcome": "Passed",
+    "seconds": 0.2953686
+  }
+]

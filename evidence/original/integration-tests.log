@@ -1,0 +1,1081 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 7
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 66.248ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 400 - application/problem+json;+charset=utf-8 129.1798ms
+PASS Climate.IntegrationTests.ApiTests.I05_InvalidJsonIsBadRequest
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 131
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 44.1558ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 400 - application/json;+charset=utf-8 55.9227ms
+PASS Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: 85.010000000000005, h: 45)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 133
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 6.0513ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 400 - application/json;+charset=utf-8 12.5194ms
+PASS Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: 23.5, h: -0.01)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 134
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.2295ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 400 - application/json;+charset=utf-8 7.3233ms
+PASS Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: 23.5, h: 100.01000000000001)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 132
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.0274ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 400 - application/json;+charset=utf-8 25.1503ms
+PASS Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: -40.009999999999998, h: 45)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 138.0149ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 143.8638ms
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."HumidityPercent", "t"."MeasuredAt", "t"."RoomId", "t"."SensorId", "t"."Sequence", "t"."TemperatureC"
+      FROM "Telemetry" AS "t"
+      LIMIT 2
+PASS Climate.IntegrationTests.ApiTests.I01_ValidSignedMeasurementIsPersisted
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Climate.Api.Security.HmacHandler[7]
+      DeviceHmac was not authenticated. Failure message: Device authentication failed.
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+      ClaimsAuthorizationRequirement:Claim.Type=scope and Claim.Value is one of the following values: (telemetry:write)
+info: Climate.Api.Security.HmacHandler[12]
+      AuthenticationScheme: DeviceHmac was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 401 - - 3.9286ms
+PASS Climate.IntegrationTests.ApiTests.S08_InvalidHexIsUnauthorized
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 129
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 4.2488ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 8.5628ms
+PASS Climate.IntegrationTests.ApiTests.I03_PhysicalBoundariesAreAccepted(t: 85, h: 100)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 128
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.6685ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 7.1774ms
+PASS Climate.IntegrationTests.ApiTests.I03_PhysicalBoundariesAreAccepted(t: -40, h: 0)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.7477ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 8.7105ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Climate.Api.Security.HmacHandler[7]
+      DeviceHmac was not authenticated. Failure message: Device authentication failed.
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+      ClaimsAuthorizationRequirement:Claim.Type=scope and Claim.Value is one of the following values: (telemetry:write)
+info: Climate.Api.Security.HmacHandler[12]
+      AuthenticationScheme: DeviceHmac was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 401 - - 4.2088ms
+PASS Climate.IntegrationTests.ApiTests.S04_ReplayOfNonceIsUnauthorized
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.9625ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 7.7682ms
+PASS Climate.IntegrationTests.ApiTests.S09_AuditContainsDecisionButNoSecrets
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      ClaimsAuthorizationRequirement:Claim.Type=scope and Claim.Value is one of the following values: (telemetry:write)
+info: Climate.Api.Security.HmacHandler[13]
+      AuthenticationScheme: DeviceHmac was forbidden.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 403 - - 2.4810ms
+PASS Climate.IntegrationTests.ApiTests.S03_DeviceWithoutWriteScopeIsForbidden
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 3.0342ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 8.2677ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'Climate.Infrastructure.ClimateDbContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: Telemetry.SensorId, Telemetry.Sequence'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: Telemetry.SensorId, Telemetry.Sequence'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ConflictObjectResult, writing value of type '<>f__AnonymousType4`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 22.1447ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 409 - application/json;+charset=utf-8 24.0205ms
+PASS Climate.IntegrationTests.ApiTests.I06_DuplicateSequenceIsConflict
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 5000
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 413 - - 0.4424ms
+PASS Climate.IntegrationTests.ApiTests.S07_OversizedBodyIsRejected
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.8845ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 7.5783ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.4562ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 4.1726ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.1353ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 4.8935ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 1.0032ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 1.2727ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 429 - - 0.8299ms
+PASS Climate.IntegrationTests.ApiTests.S06_FifthRequestIsRateLimited
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__sensor_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM "Telemetry" AS "t"
+      WHERE "t"."SensorId" = @__sensor_0
+PASS Climate.IntegrationTests.ApiTests.I07_EfCoreQueryUsesBoundParameter
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Climate.Api.Security.HmacHandler[7]
+      DeviceHmac was not authenticated. Failure message: Device authentication failed.
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+      ClaimsAuthorizationRequirement:Claim.Type=scope and Claim.Value is one of the following values: (telemetry:write)
+info: Climate.Api.Security.HmacHandler[12]
+      AuthenticationScheme: DeviceHmac was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 401 - - 1.7261ms
+PASS Climate.IntegrationTests.ApiTests.S05_ExpiredEnvelopeIsUnauthorized
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.ForbidResult[1]
+      Executing ForbidResult with authentication schemes ().
+info: Climate.Api.Security.HmacHandler[13]
+      AuthenticationScheme: DeviceHmac was forbidden.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 2.7043ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 403 - - 7.7888ms
+PASS Climate.IntegrationTests.ApiTests.S02_AnotherSensorIdIsForbidden
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - text/plain;+charset=utf-8 2
+info: Climate.Api.Security.HmacHandler[7]
+      DeviceHmac was not authenticated. Failure message: Device authentication failed.
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+      ClaimsAuthorizationRequirement:Claim.Type=scope and Claim.Value is one of the following values: (telemetry:write)
+info: Climate.Api.Security.HmacHandler[12]
+      AuthenticationScheme: DeviceHmac was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 401 - - 1.5651ms
+PASS Climate.IntegrationTests.ApiTests.I02_MissingSignatureIsUnauthorized
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Climate.Api.Security.HmacHandler[7]
+      DeviceHmac was not authenticated. Failure message: Device authentication failed.
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+      ClaimsAuthorizationRequirement:Claim.Type=scope and Claim.Value is one of the following values: (telemetry:write)
+info: Climate.Api.Security.HmacHandler[12]
+      AuthenticationScheme: DeviceHmac was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 401 - - 2.0939ms
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM "Telemetry" AS "t"
+PASS Climate.IntegrationTests.ApiTests.S01_TamperedTemperatureIsRejectedBeforeWrite
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/api/v1/climate/readings/latest/DVC-002 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.ReadingsController.GetV1 (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "GetV1", controller = "Readings"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetV1(System.String, System.Threading.CancellationToken) on controller Climate.Api.Controllers.ReadingsController (Climate.Api).
+info: Microsoft.AspNetCore.Mvc.ForbidResult[1]
+      Executing ForbidResult with authentication schemes ().
+info: Climate.Api.Security.HmacHandler[13]
+      AuthenticationScheme: DeviceHmac was forbidden.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.ReadingsController.GetV1 (Climate.Api) in 2.0437ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.ReadingsController.GetV1 (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/api/v1/climate/readings/latest/DVC-002 - 403 - - 8.8105ms
+PASS Climate.IntegrationTests.VersioningTests.V04_ReadingAnotherSensorIsForbidden
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/api/v1/climate/readings/latest/DVC-001 - - -
+info: Climate.Api.Security.HmacHandler[7]
+      DeviceHmac was not authenticated. Failure message: Device authentication failed.
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Climate.Api.Security.HmacHandler[12]
+      AuthenticationScheme: DeviceHmac was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/api/v1/climate/readings/latest/DVC-001 - 401 - - 1.3353ms
+PASS Climate.IntegrationTests.VersioningTests.V03_ReadWithoutHmacIsUnauthorized
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/api/v9/climate/readings/latest/DVC-001 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/api/v9/climate/readings/latest/DVC-001 - 404 - - 1.5769ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[16]
+      Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost/api/v9/climate/readings/latest/DVC-001, Response status code: 404
+PASS Climate.IntegrationTests.VersioningTests.V05_UnknownVersionIsNotRouted
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 4.1656ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 8.8070ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/api/v2/climate/readings/latest/DVC-001 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.ReadingsController.GetV2 (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "GetV2", controller = "Readings"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetV2(System.String, System.Threading.CancellationToken) on controller Climate.Api.Controllers.ReadingsController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__sensorId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."HumidityPercent", "t"."MeasuredAt", "t"."RoomId", "t"."SensorId", "t"."Sequence", "t"."TemperatureC"
+      FROM "Telemetry" AS "t"
+      WHERE "t"."SensorId" = @__sensorId_0
+      ORDER BY "t"."Sequence" DESC
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`5[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`2[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Climate.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.ReadingsController.GetV2 (Climate.Api) in 13.0391ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.ReadingsController.GetV2 (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/api/v2/climate/readings/latest/DVC-001 - 200 - application/json;+charset=utf-8 16.9138ms
+PASS Climate.IntegrationTests.VersioningTests.V02_V2UsesExplicitUnitWithoutChangingV1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 3.3217ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 10.2633ms
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM "Telemetry" AS "t"
+PASS Climate.IntegrationTests.VersioningTests.V06_RealOutboxDeliversThroughHmacApi
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Telemetry" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Telemetry" PRIMARY KEY AUTOINCREMENT,
+          "SensorId" TEXT NOT NULL,
+          "RoomId" TEXT NOT NULL,
+          "Sequence" INTEGER NOT NULL,
+          "TemperatureC" TEXT NOT NULL,
+          "HumidityPercent" TEXT NOT NULL,
+          "MeasuredAt" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX "IX_Telemetry_SensorId_Sequence" ON "Telemetry" ("SensorId", "Sequence");
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/api/v1/telemetry - application/json;+charset=utf-8 130
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Post", controller = "Telemetry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Climate.Core.TelemetryRequest, System.Threading.CancellationToken) on controller Climate.Api.Controllers.TelemetryController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4), @p3='?' (Size = 7), @p4='?' (DbType = Int64), @p5='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Telemetry" ("HumidityPercent", "MeasuredAt", "RoomId", "SensorId", "Sequence", "TemperatureC")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+      RETURNING "Id";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type '<>f__AnonymousType5`3[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.TelemetryController.Post (Climate.Api) in 3.1383ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.TelemetryController.Post (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/api/v1/telemetry - 201 - application/json;+charset=utf-8 7.9352ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/api/v1/climate/readings/latest/DVC-001 - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Climate.Api.Controllers.ReadingsController.GetV1 (Climate.Api)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "GetV1", controller = "Readings"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetV1(System.String, System.Threading.CancellationToken) on controller Climate.Api.Controllers.ReadingsController (Climate.Api).
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__sensorId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."HumidityPercent", "t"."MeasuredAt", "t"."RoomId", "t"."SensorId", "t"."Sequence", "t"."TemperatureC"
+      FROM "Telemetry" AS "t"
+      WHERE "t"."SensorId" = @__sensorId_0
+      ORDER BY "t"."Sequence" DESC
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Climate.Api.Controllers.ReadingsController.GetV1 (Climate.Api) in 43.375ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Climate.Api.Controllers.ReadingsController.GetV1 (Climate.Api)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/api/v1/climate/readings/latest/DVC-001 - 200 - application/json;+charset=utf-8 49.8196ms
+PASS Climate.IntegrationTests.VersioningTests.V01_StrictOldClientStillReadsV1
+TOTAL 26; FAILED 0; SKIPPED 0

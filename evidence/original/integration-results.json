@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Climate.IntegrationTests.VersioningTests.V06_RealOutboxDeliversThroughHmacApi",
+    "outcome": "Passed",
+    "seconds": 0.2222002
+  },
+  {
+    "name": "Climate.IntegrationTests.VersioningTests.V05_UnknownVersionIsNotRouted",
+    "outcome": "Passed",
+    "seconds": 0.0189731
+  },
+  {
+    "name": "Climate.IntegrationTests.VersioningTests.V03_ReadWithoutHmacIsUnauthorized",
+    "outcome": "Passed",
+    "seconds": 0.0247931
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S01_TamperedTemperatureIsRejectedBeforeWrite",
+    "outcome": "Passed",
+    "seconds": 0.0558259
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I02_MissingSignatureIsUnauthorized",
+    "outcome": "Passed",
+    "seconds": 0.0187216
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S02_AnotherSensorIdIsForbidden",
+    "outcome": "Passed",
+    "seconds": 0.0241398
+  },
+  {
+    "name": "Climate.IntegrationTests.VersioningTests.V04_ReadingAnotherSensorIsForbidden",
+    "outcome": "Passed",
+    "seconds": 0.0277466
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S05_ExpiredEnvelopeIsUnauthorized",
+    "outcome": "Passed",
+    "seconds": 0.0189068
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I07_EfCoreQueryUsesBoundParameter",
+    "outcome": "Passed",
+    "seconds": 0.0818655
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S06_FifthRequestIsRateLimited",
+    "outcome": "Passed",
+    "seconds": 0.042867
+  },
+  {
+    "name": "Climate.IntegrationTests.VersioningTests.V01_StrictOldClientStillReadsV1",
+    "outcome": "Passed",
+    "seconds": 0.0780755
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I06_DuplicateSequenceIsConflict",
+    "outcome": "Passed",
+    "seconds": 0.0498786
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S03_DeviceWithoutWriteScopeIsForbidden",
+    "outcome": "Passed",
+    "seconds": 0.0457815
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S09_AuditContainsDecisionButNoSecrets",
+    "outcome": "Passed",
+    "seconds": 0.0365946
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S04_ReplayOfNonceIsUnauthorized",
+    "outcome": "Passed",
+    "seconds": 0.0316932
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I03_PhysicalBoundariesAreAccepted(t: -40, h: 0)",
+    "outcome": "Passed",
+    "seconds": 0.0231174
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S07_OversizedBodyIsRejected",
+    "outcome": "Passed",
+    "seconds": 0.0174064
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I03_PhysicalBoundariesAreAccepted(t: 85, h: 100)",
+    "outcome": "Passed",
+    "seconds": 0.0254115
+  },
+  {
+    "name": "Climate.IntegrationTests.VersioningTests.V02_V2UsesExplicitUnitWithoutChangingV1",
+    "outcome": "Passed",
+    "seconds": 0.0433065
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.S08_InvalidHexIsUnauthorized",
+    "outcome": "Passed",
+    "seconds": 0.0210817
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I01_ValidSignedMeasurementIsPersisted",
+    "outcome": "Passed",
+    "seconds": 0.3167366
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: -40.009999999999998, h: 45)",
+    "outcome": "Passed",
+    "seconds": 0.0418233
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: 23.5, h: 100.01000000000001)",
+    "outcome": "Passed",
+    "seconds": 0.0251332
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: 23.5, h: -0.01)",
+    "outcome": "Passed",
+    "seconds": 0.0782214
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I04_OutOfRangeIsBadRequest(t: 85.010000000000005, h: 45)",
+    "outcome": "Passed",
+    "seconds": 0.1196963
+  },
+  {
+    "name": "Climate.IntegrationTests.ApiTests.I05_InvalidJsonIsBadRequest",
+    "outcome": "Passed",
+    "seconds": 0.9018625
+  }
+]

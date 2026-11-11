@@ -1,0 +1,12 @@
+MSBuild version 17.11.69+4d6a29faa for .NET
+  Climate.Core -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/src/Climate.Core/bin/Release/net8.0/Climate.Core.dll
+  Climate.Infrastructure -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/src/Climate.Infrastructure/bin/Release/net8.0/Climate.Infrastructure.dll
+  Climate.Api -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/src/Climate.Api/bin/Release/net8.0/Climate.Api.dll
+  Climate.Before -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/samples/Climate.Before/bin/Release/net8.0/Climate.Before.dll
+  Climate.After -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/samples/Climate.After/bin/Release/net8.0/Climate.After.dll
+  Climate.Operations -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/src/Climate.Operations/bin/Release/net8.0/Climate.Operations.dll
+  Climate.UnitTests -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/tests/Climate.UnitTests/bin/Release/net8.0/Climate.UnitTests.dll
+  Climate.IntegrationTests -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/tests/Climate.IntegrationTests/bin/Release/net8.0/Climate.IntegrationTests.dll
+  Climate.Metrics -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/tools/Climate.Metrics/bin/Release/net8.0/Climate.Metrics.dll
+  Climate.TestRunner -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/tools/Climate.TestRunner/bin/Release/net8.0/Climate.TestRunner.dll
+  Climate.Portfolio -> /workspace/scratch/1abb9b98b267/mdk0301_variant3/project/tools/Climate.Portfolio/bin/Release/net8.0/Climate.Portfolio.dll
