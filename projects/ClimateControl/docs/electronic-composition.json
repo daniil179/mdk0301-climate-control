@@ -109,16 +109,20 @@
         {
           "name": "BCrypt.Net-Next",
           "version": "4.2.1"
+        },
+        {
+          "name": "System.Security.Cryptography.ProtectedData",
+          "version": "8.0.0"
         }
       ],
       "files": [
         {
           "path": "src/Climate.Operations/BackupService.cs",
-          "sha256": "00c659b6e2eda7f5ab5a95b14d8ef4675b438d262a81b9bc54ca79a19f960386"
+          "sha256": "1b80d831c68b059e53aa470d1614f72d38c18a805b74bc7a6b818a54e197d958"
         },
         {
           "path": "src/Climate.Operations/Climate.Operations.csproj",
-          "sha256": "04347e5b2ee57dfd27127591783349f0f45c1ad79939a2a8effc8c80cdbf1fce"
+          "sha256": "694202d67b7130e681499f5c873266db559ea29164f3a79d470a6e67ea414d6e"
         },
         {
           "path": "src/Climate.Operations/HmacOutboxTransport.cs",
@@ -142,7 +146,7 @@
         },
         {
           "path": "src/Climate.Operations/SatProtocol.cs",
-          "sha256": "f96c6dde78925750c24228259788d02ee637382e2a3e35112539caf0e261e50f"
+          "sha256": "55fa8fbc95ed39e0d38797dbc057cfff9319cef721b2ea8089a2aa59ed0abfb0"
         },
         {
           "path": "src/Climate.Operations/SecureUpdater.cs",
@@ -151,6 +155,10 @@
         {
           "path": "src/Climate.Operations/SecurityControls.cs",
           "sha256": "512b5428a63f75e0a3863106a03bd3e35ecedd3b81b47f338256462cbf4bc4c9"
+        },
+        {
+          "path": "src/Climate.Operations/WindowsSecretProtection.cs",
+          "sha256": "0fbdba52a79fd5633db40b86b2319a37705ba0e6197993dd509c3ae46cefea8a"
         }
       ]
     }

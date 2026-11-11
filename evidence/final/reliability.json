@@ -1,0 +1,8 @@
+{
+  "ObservationHours": 720,
+  "DowntimeMinutes": 100,
+  "Failures": 3,
+  "MtbfHours": 239.44444444444446,
+  "MttrMinutes": 33.333333333333336,
+  "AvailabilityPercent": 99.76851851851852
+}

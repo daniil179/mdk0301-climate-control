@@ -69,11 +69,25 @@ await using (var restored = OutboxContext.Open(restoredPath))
 string hash = PasswordService.Hash("Synthetic-demo-passphrase!2026");
 Check("BCRYPT", "BCrypt accepts correct and rejects wrong demo password", PasswordService.Verify("Synthetic-demo-passphrase!2026", hash) && !PasswordService.Verify("wrong-synthetic-passphrase", hash), "Only verification booleans are logged.");
 Check("RBAC", "Operator cannot change configuration; engineer can", !Rbac.IsAllowed(UserRole.Operator, Operation.ChangeConfiguration) && Rbac.IsAllowed(UserRole.Engineer, Operation.ChangeConfiguration), "Closed role/permission matrix.");
-checks.Add(new("DPAPI", "Windows DPAPI and user-computer checks", "DEFERRED", "Excluded from this stage; no DPAPI implementation executed."));
+if (OperatingSystem.IsWindows())
+{
+    byte[] secret = RandomNumberGenerator.GetBytes(32);
+    byte[] encrypted = WindowsSecretProtection.Protect(secret);
+    byte[] restoredSecret = WindowsSecretProtection.Unprotect(encrypted);
+    bool roundTrip = CryptographicOperations.FixedTimeEquals(secret, restoredSecret);
+    bool wrongPurposeRejected = false;
+    try { WindowsSecretProtection.Unprotect(encrypted, "DifferentPurpose"); }
+    catch (CryptographicException) { wrongPurposeRejected = true; }
+    Check("DPAPI", "CurrentUser secret round-trip and purpose isolation", roundTrip && wrongPurposeRejected,
+        "Windows DPAPI executed; raw keys and blobs are not included in the report.");
+    CryptographicOperations.ZeroMemory(secret);
+    CryptographicOperations.ZeroMemory(restoredSecret);
+}
+else checks.Add(new("DPAPI", "Windows DPAPI", "NOT_RUN", "Windows is required."));
 File.WriteAllText(Path.Combine(output, "checks.json"), JsonSerializer.Serialize(checks, new JsonSerializerOptions { WriteIndented = true }));
 File.WriteAllText(Path.Combine(output, "SAT.md"), SatProtocol.ToMarkdown(checks));
 File.WriteAllText(Path.Combine(output, "reliability.json"), JsonSerializer.Serialize(ReliabilityMetrics.Calculate(720, 20, 35, 45), new JsonSerializerOptions { WriteIndented = true }));
-Console.WriteLine("SAT.md saved. DPAPI: DEFERRED.");
+Console.WriteLine("SAT.md saved. Results reflect the executed platform checks.");
 Environment.ExitCode = checks.Any(x => x.Status == "FAIL") ? 1 : 0;
 
 public sealed class DemoTransport : IOutboxTransport

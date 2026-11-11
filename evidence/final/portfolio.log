@@ -1,0 +1,10 @@
+CERT: PASS — X.509 chain, validity, DNS and Code Signing EKU
+UPDATE: PASS — Signed SemVer 1.1.0 package activates
+SHA256: PASS — Corrupt package is rejected; active pointer stays unchanged
+MIGRATION: PASS — Expand migration preserves legacy row and assigns Priority=0
+OFFLINE: PASS — SQLite + Polly: two transient failures, third attempt accepted
+BACKUP: PASS — Online backup integrity and restore preserve two rows
+BCRYPT: PASS — BCrypt accepts correct and rejects wrong demo password
+RBAC: PASS — Operator cannot change configuration; engineer can
+DPAPI: PASS — CurrentUser secret round-trip and purpose isolation
+SAT.md saved. Results reflect the executed platform checks.

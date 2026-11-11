@@ -12,13 +12,13 @@ public static class SatProtocol
         result.AppendLine("| ID | Проверка | Статус | Доказательство |\n|---|---|---|---|");
         foreach (var check in checks)
             result.AppendLine($"| {Clean(check.Id)} | {Clean(check.Description)} | {Clean(check.Status)} | {Clean(check.Evidence)} |");
-        result.AppendLine("\nDPAPI и проверки на пользовательском Windows отложены; не включены в выполненный объём.");
+        result.AppendLine("\nСтатусы отражают только перечисленные программные проверки. Приёмка сети, оборудования и площадки выполняется отдельно.");
         return result.ToString();
     }
     public static void ConvertJson(string input, string output)
     {
         var rows = JsonSerializer.Deserialize<List<SatCheck>>(File.ReadAllText(input)) ?? throw new InvalidDataException();
-        if (rows.Any(x => x.Status is not ("PASS" or "FAIL" or "DEFERRED"))) throw new InvalidDataException("Unknown SAT status.");
+        if (rows.Any(x => x.Status is not ("PASS" or "FAIL" or "DEFERRED" or "NOT_RUN"))) throw new InvalidDataException("Unknown SAT status.");
         File.WriteAllText(output, ToMarkdown(rows));
     }
 }

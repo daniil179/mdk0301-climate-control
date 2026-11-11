@@ -4,4 +4,5 @@
 <PackageReference Include="Polly" Version="8.9.0"/>
 <PackageReference Include="Semver" Version="3.0.0"/>
 <PackageReference Include="BCrypt.Net-Next" Version="4.2.1"/>
+<PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0"/>
 </ItemGroup></Project>

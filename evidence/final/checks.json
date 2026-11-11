@@ -1,0 +1,56 @@
+[
+  {
+    "Id": "CERT",
+    "Description": "X.509 chain, validity, DNS and Code Signing EKU",
+    "Status": "PASS",
+    "Evidence": "Offline test CA; revocation is not tested."
+  },
+  {
+    "Id": "UPDATE",
+    "Description": "Signed SemVer 1.1.0 package activates",
+    "Status": "PASS",
+    "Evidence": "installation/active.json"
+  },
+  {
+    "Id": "SHA256",
+    "Description": "Corrupt package is rejected; active pointer stays unchanged",
+    "Status": "PASS",
+    "Evidence": "No installation of 1.2.0"
+  },
+  {
+    "Id": "MIGRATION",
+    "Description": "Expand migration preserves legacy row and assigns Priority=0",
+    "Status": "PASS",
+    "Evidence": "outbox.db / __EFMigrationsHistory"
+  },
+  {
+    "Id": "OFFLINE",
+    "Description": "SQLite \u002B Polly: two transient failures, third attempt accepted",
+    "Status": "PASS",
+    "Evidence": "Attempts=3; persisted Delivered state"
+  },
+  {
+    "Id": "BACKUP",
+    "Description": "Online backup integrity and restore preserve two rows",
+    "Status": "PASS",
+    "Evidence": "backup.db.sha256 / restored.db"
+  },
+  {
+    "Id": "BCRYPT",
+    "Description": "BCrypt accepts correct and rejects wrong demo password",
+    "Status": "PASS",
+    "Evidence": "Only verification booleans are logged."
+  },
+  {
+    "Id": "RBAC",
+    "Description": "Operator cannot change configuration; engineer can",
+    "Status": "PASS",
+    "Evidence": "Closed role/permission matrix."
+  },
+  {
+    "Id": "DPAPI",
+    "Description": "CurrentUser secret round-trip and purpose isolation",
+    "Status": "PASS",
+    "Evidence": "Windows DPAPI executed; raw keys and blobs are not included in the report."
+  }
+]
