@@ -1,0 +1,17 @@
+using System;
+using System.Globalization;
+public class Program
+{
+    public static void Main()
+    {
+        double observationHours = 720;
+        double downtimeMinutes = 20 + 35 + 45;
+        int failures = 3;
+        double uptime = observationHours - downtimeMinutes / 60;
+        Console.WriteLine("CLIMATE CONTROL / MODELLED INCIDENT DATA");
+        Console.WriteLine("Observation: 720 h; failures: 3; downtime: 100 min");
+        Console.WriteLine("MTBF = " + (uptime / failures).ToString("F4", CultureInfo.InvariantCulture) + " h");
+        Console.WriteLine("MTTR = " + (downtimeMinutes / failures).ToString("F4", CultureInfo.InvariantCulture) + " min");
+        Console.WriteLine("Availability = " + (100 * uptime / observationHours).ToString("F6", CultureInfo.InvariantCulture) + "%");
+    }
+}

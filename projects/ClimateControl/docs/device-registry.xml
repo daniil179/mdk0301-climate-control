@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<cc:registry xmlns:cc="urn:climate-control:device-registry:1" schemaVersion="1.0">
+  <cc:device sensorId="DVC-001" roomId="A101" status="test-fixture" />
+</cc:registry>

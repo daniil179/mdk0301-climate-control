@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0",
+  "systemId": "CC-CAMPUS",
+  "variant": 3,
+  "components": [
+    {
+      "id": "CC-CORE",
+      "path": "src/Climate.Core",
+      "directPackages": [
+        {
+          "name": "FluentValidation",
+          "version": "12.2.0"
+        }
+      ],
+      "files": [
+        {
+          "path": "src/Climate.Core/Climate.Core.csproj",
+          "sha256": "58e658e45ca7ef8550860025013dd353af2bc2f791e9b09fbc24c8c5718e3863"
+        },
+        {
+          "path": "src/Climate.Core/HmacProtocol.cs",
+          "sha256": "590a983daa79057ab400941ad6859ecffa400db440ac071dce24529883bc2866"
+        },
+        {
+          "path": "src/Climate.Core/TelemetryRequest.cs",
+          "sha256": "fd87da0bc0afb6e409dfe45a9ffc7dacaedba385d223711a131334c2e8aed77b"
+        },
+        {
+          "path": "src/Climate.Core/TelemetryValidator.cs",
+          "sha256": "ffec816929ad537bd42c7ad32019a1c342f529027929b247551b42ff69769616"
+        }
+      ]
+    },
+    {
+      "id": "CC-DB",
+      "path": "src/Climate.Infrastructure",
+      "directPackages": [
+        {
+          "name": "Microsoft.EntityFrameworkCore.Sqlite",
+          "version": "8.0.33"
+        }
+      ],
+      "files": [
+        {
+          "path": "src/Climate.Infrastructure/Climate.Infrastructure.csproj",
+          "sha256": "c0bd3d95951a5a3c715ba92e8e4cdbb5e29a6a9a6aa71286e867703589cebf26"
+        },
+        {
+          "path": "src/Climate.Infrastructure/ClimateDbContext.cs",
+          "sha256": "72d3d46a8e86950957dab5cb7487c5231630a37f3c6b6ff790d6f947169746a6"
+        }
+      ]
+    },
+    {
+      "id": "CC-API",
+      "path": "src/Climate.Api",
+      "directPackages": [],
+      "files": [
+        {
+          "path": "src/Climate.Api/Climate.Api.csproj",
+          "sha256": "709e420b40a32626bc133647e815edc775c522c9b3d8c7f626a858c1fec13a93"
+        },
+        {
+          "path": "src/Climate.Api/Controllers/ReadingsController.cs",
+          "sha256": "762862d669d5fc62979f22e9238774cc7d7f783e0a902e4c1009c1df247457be"
+        },
+        {
+          "path": "src/Climate.Api/Controllers/TelemetryController.cs",
+          "sha256": "333574e2cee2d801d92600ce94736899e38c6eeaa4a720f13c4d31c3d7182af2"
+        },
+        {
+          "path": "src/Climate.Api/Program.cs",
+          "sha256": "d6912a825ffe432bdc139d82ada09c636ee7a7a3028971015c73ceadbfececaa"
+        },
+        {
+          "path": "src/Climate.Api/Security/AuditSink.cs",
+          "sha256": "22b8ad21e57199cf2a9fa6d06068febee66d505180cd1f7e2bb25667cd07a2f2"
+        },
+        {
+          "path": "src/Climate.Api/Security/DeviceRegistry.cs",
+          "sha256": "6aec2b0bbbebd941422c614b686fa3a0ab894736630e13f7c9d2aac57d2f1a9f"
+        },
+        {
+          "path": "src/Climate.Api/Security/HmacHandler.cs",
+          "sha256": "2c72b71ec969a4782336e4062ca85451df0146437fd1bb07d346e1fc3559a1dd"
+        },
+        {
+          "path": "src/Climate.Api/Security/ReplayGuard.cs",
+          "sha256": "d42e8719db507f168087e09eb2ddd5ef7828734a67c70f0e575684c897526057"
+        }
+      ]
+    },
+    {
+      "id": "CC-OPS",
+      "path": "src/Climate.Operations",
+      "directPackages": [
+        {
+          "name": "Microsoft.EntityFrameworkCore.Sqlite",
+          "version": "8.0.33"
+        },
+        {
+          "name": "Polly",
+          "version": "8.9.0"
+        },
+        {
+          "name": "Semver",
+          "version": "3.0.0"
+        },
+        {
+          "name": "BCrypt.Net-Next",
+          "version": "4.2.1"
+        }
+      ],
+      "files": [
+        {
+          "path": "src/Climate.Operations/BackupService.cs",
+          "sha256": "00c659b6e2eda7f5ab5a95b14d8ef4675b438d262a81b9bc54ca79a19f960386"
+        },
+        {
+          "path": "src/Climate.Operations/Climate.Operations.csproj",
+          "sha256": "04347e5b2ee57dfd27127591783349f0f45c1ad79939a2a8effc8c80cdbf1fce"
+        },
+        {
+          "path": "src/Climate.Operations/HmacOutboxTransport.cs",
+          "sha256": "24b1f2c0270867002574911d352cfae28f9b27a061fe52476c1c3419e8781849"
+        },
+        {
+          "path": "src/Climate.Operations/Migrations/Initial.cs",
+          "sha256": "72ee891d6ba4faba220c6aeeac4cb028bbee3a0a118ce8a5eeea7e7be2abce13"
+        },
+        {
+          "path": "src/Climate.Operations/OfflineBuffer.cs",
+          "sha256": "6946e0a0230b3a99b8b80948dd01933b2c0e002cd12a77da5bc5cdbb90b5a8ad"
+        },
+        {
+          "path": "src/Climate.Operations/OutboxContext.cs",
+          "sha256": "87dfdd6ef33227fcad58c2fbc90e975e0b0095dbb9a9d24f652a16731bcf4539"
+        },
+        {
+          "path": "src/Climate.Operations/ReliabilityMetrics.cs",
+          "sha256": "e7475ae2e6f0d065cbfdb888e9ef6ea3010f82c0c3a9658b7a245cfa70d71fc1"
+        },
+        {
+          "path": "src/Climate.Operations/SatProtocol.cs",
+          "sha256": "f96c6dde78925750c24228259788d02ee637382e2a3e35112539caf0e261e50f"
+        },
+        {
+          "path": "src/Climate.Operations/SecureUpdater.cs",
+          "sha256": "efe6545c63ecc92ce30d8a916c816d6159f5ce1164af35418872b5d1aa5d3512"
+        },
+        {
+          "path": "src/Climate.Operations/SecurityControls.cs",
+          "sha256": "512b5428a63f75e0a3863106a03bd3e35ecedd3b81b47f338256462cbf4bc4c9"
+        }
+      ]
+    }
+  ],
+  "device": {
+    "sensorId": "DVC-001",
+    "roomId": "A101",
+    "physicalSerial": null,
+    "status": "test-fixture"
+  }
+}

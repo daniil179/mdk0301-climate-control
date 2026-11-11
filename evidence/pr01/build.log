@@ -1,0 +1,19 @@
+  Определение проектов для восстановления...
+  Все проекты обновлены для восстановления.
+  Climate.After -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\samples\Climate.After\bin\Release\net8.0\Climate.After.dll
+  Climate.Before -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\samples\Climate.Before\bin\Release\net8.0\Climate.Before.dll
+  Climate.Metrics -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\tools\Climate.Metrics\bin\Release\net8.0\Climate.Metrics.dll
+  Climate.Core -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\src\Climate.Core\bin\Release\net8.0\Climate.Core.dll
+  Climate.Infrastructure -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\src\Climate.Infrastructure\bin\Release\net8.0\Climate.Infrastructure.dll
+  Climate.Operations -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\src\Climate.Operations\bin\Release\net8.0\Climate.Operations.dll
+  Climate.Api -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\src\Climate.Api\bin\Release\net8.0\Climate.Api.dll
+  Climate.Portfolio -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\tools\Climate.Portfolio\bin\Release\net8.0\Climate.Portfolio.dll
+  Climate.UnitTests -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\tests\Climate.UnitTests\bin\Release\net8.0\Climate.UnitTests.dll
+  Climate.IntegrationTests -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\tests\Climate.IntegrationTests\bin\Release\net8.0\Climate.IntegrationTests.dll
+  Climate.TestRunner -> C:\Users\bojzo\Documents\Codex\2026-10-27\1-16-09-02-07-2-2\work\mdk0301\publish\projects\ClimateControl\tools\Climate.TestRunner\bin\Release\net8.0\Climate.TestRunner.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:03.48

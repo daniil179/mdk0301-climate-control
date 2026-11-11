@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk.Web"><ItemGroup><ProjectReference Include="../Climate.Core/Climate.Core.csproj"/><ProjectReference Include="../Climate.Infrastructure/Climate.Infrastructure.csproj"/></ItemGroup></Project>

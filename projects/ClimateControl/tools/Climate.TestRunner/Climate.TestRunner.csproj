@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+<ItemGroup><PackageReference Include="xunit.runner.utility" Version="2.9.3"/>
+<ProjectReference Include="../../tests/Climate.UnitTests/Climate.UnitTests.csproj"/>
+<ProjectReference Include="../../tests/Climate.IntegrationTests/Climate.IntegrationTests.csproj"/>
+</ItemGroup></Project>

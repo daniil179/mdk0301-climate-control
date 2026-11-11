@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+<ItemGroup>
+<PackageReference Include="Microsoft.CodeAnalysis.Metrics" Version="4.14.0" ExcludeAssets="build;buildTransitive" PrivateAssets="all" GeneratePathProperty="true"/>
+<Reference Include="Microsoft.CodeAnalysis"><HintPath>$(PkgMicrosoft_CodeAnalysis_Metrics)/Metrics/Microsoft.CodeAnalysis.dll</HintPath></Reference>
+<Reference Include="Microsoft.CodeAnalysis.CSharp"><HintPath>$(PkgMicrosoft_CodeAnalysis_Metrics)/Metrics/Microsoft.CodeAnalysis.CSharp.dll</HintPath></Reference>
+<Reference Include="Microsoft.CodeAnalysis.AnalyzerUtilities"><HintPath>$(PkgMicrosoft_CodeAnalysis_Metrics)/Metrics/Microsoft.CodeAnalysis.AnalyzerUtilities.dll</HintPath></Reference>
+</ItemGroup>
+</Project>
